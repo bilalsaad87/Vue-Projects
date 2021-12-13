@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Random User Generator</title>
+</head>
+<body>
+    <div id="app">
+        <div class="card" :class="gender">        
+            <img v-bind:src="picture" :alt="`${firstName} ${lastName}`" :class="gender"/>
+            <div class="container">
+                <h1>{{firstName}} {{lastName}}</h1>
+                <h3><i class="fas fa-map-marked-alt"></i><b>Country:</b> {{address}}</h3>
+                <h3><i class="far fa-envelope"></i><b>Email:</b> {{email}}</h3>
+                <h3><i class="fas fa-phone-alt"></i><b>Phone:</b> {{phone}}</h3>
+            </div>
+        </div>
+        <button @click="getUser()">Get Random User</button>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
